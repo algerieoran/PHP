@@ -8,7 +8,6 @@ function debug($param) {
     echo '</pre>';
 }
 
-
 //2/--------------------------fonction membres--------------------------------------
 
     // Fonction qui indique si l'internaute est connécté :
@@ -21,3 +20,34 @@ function debug($param) {
         // OU :
         return(isset($_SESSION['membre']));
     }
+
+//3/ Fonctionqui indique si le membre est admin connecté :
+function internauteEstConnecteEtAdmin() {
+    if(internauteEstConnecte() && $_SESSION['membre']['statut'] == 1){ // si membre est connecté et que son statut dans la session vaut 1, il est admin connecté
+            return true;
+    }else {
+        return false;
+    }
+    // OU :
+    return (internauteEstConnecte() && $_SESSION['membre']['statut'] == 1);
+}
+
+//3/---------------------------------------------------------------------Fonction de Requêtte : ---------------------------------------------------------------------
+function executeRequete($req, $param = array()) {   // cette fonction attend 2 valeurs : 1 ezquête SQL (obligatoire) et un array qui associe les marqueurs aux valeurs (non obligatoire car on a affecté au paramètre un array() vide par défaut)
+
+    // Echappement des données reçues avec htmlspecialchars :
+    if (!empty($param)) {  // si l'array $param n'est pas vide, je peux faire la boucle :
+
+        foreach($param as $indice => $valeur) {
+            $param[$indice] = htmlspecialchars($valeur, ENT_QUOTES);  // ici , on échappe les valeurs de $param que l'on remet à leur place dans $param[$indice]
+        }
+    }
+
+    global $pdo;   // permet d'avoir accès à la variable $pdo définie dans l'espace global (c'est-à-dire hors de cette fonction) au sein de cette fonction
+
+    $result = $pdo->prepare($req); // on prépare la requête envoyée à notre fonction
+    $result->execute($param);   /// on exécute la requête en lui donnant l'arrayprésent dans $param qui associe tous les marqueurs à leur valeur
+    return $result;   // on retourne le résultat de la requête de SELECT
+
+
+}// fin de function executeRequete($req, $param = array())

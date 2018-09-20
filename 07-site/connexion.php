@@ -1,5 +1,30 @@
 <?php
 require_once 'inc/init.inc.php';
+
+// 2- Déconnexion de l'internaute :
+if(isset($_GET['action']) && $_GET['action'] == 'deconnexion') {// si l'internaute a cliqué sur "se déconnecter"
+    session_destroy();  // on suprime toute la session du membre. Rappel : cette instruction ne s'exécute qu'en fin des script
+
+}
+
+
+// 3- On vérifie si l'internaute est déjà connecté :
+    if(internauteEstConnecte()) { // s'il est connecté on le renvoie vers don profil :
+    header('location:profil.php');
+    exit();  // pour quitter le script
+}
+
+
+
+
+
+
+
+
+
+
+
+
 //debug($_POST);
 
 // 1- traitement du formulaire :

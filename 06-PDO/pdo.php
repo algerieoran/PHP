@@ -190,9 +190,9 @@ foreach($donnees as $employe) {
 // Si nous avions voulu afficher TOUTES les infos de façon dynamique, nous aurions fait 2 foreach imbriquées l'une dans l'autre.
 
 
-//-------------
+//-------------------------------
 // 07 - Table HTML
-//------------
+//-------------------------------
 echo '<h3> 07 - Table HTML </h3>';
 
 // On veut afficher dynamiquement les résultats de la requêtes sous forme de table HTML.

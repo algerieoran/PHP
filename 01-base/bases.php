@@ -111,7 +111,7 @@ echo '<h2> Constante</h2>';
 //---------------------------------
 // une constante permet de conservait une valeur  sauf que celle-ci ne pourra pas être modifiée durant l'exécution du ou des scripts. Utile par exemple pour conserver les paramèttres de connextion à la BDD afin de ne pas pouvoir les altérer.
 
-define('CAPITALE', 'Paris');  // déclar la constante appelée CAPITALE et lui affevte la valeur "Paris". Par convention, les constantes s'&crivent en majuscule
+define('CAPITALE', 'Paris');  // déclar la constante appelée CAPITALE et lui affecté la valeur "Paris". Par convention, les constantes s'ecrivent en majuscule
 echo CAPITALE . '<br>';  // affiche Paris
 
 
@@ -679,7 +679,8 @@ foreach($tab as $indice => $valeur) {  // quand il y a 2 variables après "as", 
 
 //----------------------------------------------- Exercice :----------------------------------------------------------------------------------------------
 
-/* - écrivez un array avec les indices prenom, nom, email et telephone et mettez-y pour valeur des informations fictives. Remarque : cet array ne concerne qu'une seule personne.    - Puis avec une boucle foreach, affichez les valeurs de votre array dans des <p>, sauf le prenom qui doit être affiché dans un <h3>.
+/* - écrivez un array avec les indices prenom, nom, email et telephone et mettez-y pour valeur des informations fictives. Remarque : cet array ne concerne qu'une seule personne. 
+   - Puis avec une boucle foreach, affichez les valeurs de votre array dans des <p>, sauf le prenom qui doit être affiché dans un <h3>.
 
 */
 

@@ -18,7 +18,8 @@ function debug($param) {
             return false;
         }
         // OU :
-        return(isset($_SESSION['membre']));
+       
+        
     }
 
 //3/ Fonctionqui indique si le membre est admin connecté :

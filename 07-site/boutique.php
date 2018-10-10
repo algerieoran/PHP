@@ -23,7 +23,7 @@ $contenu_gauche .='</div>';
 
 // 2- Affichage des produits selon la catégorie choisie :
 if(isset($_GET['categorie']) && $_GET['categorie'] !='tous') {
-    // si existe categorie dans $_GET (donc mon url), c'est qu'on a cliqué sur une categorie. De plus, si elle est différente de "tous" c'est qu'on a choiei une categorie particulier (robe, pull...). On sélectionne donc tous les produits de CETTE categorie :
+    // si existe categorie dans $_GET (donc mon url), c'est qu'on a cliqué sur une categorie. De plus, si elle est différente de "tous" c'est qu'on a choisi une categorie particulier (robe, pull...). On sélectionne donc tous les produits de CETTE categorie :
         $donnees = executeRequete("SELECT * FROM produit WHERE categorie = :categorie", array(':categorie'=> $_GET['categorie']));
 
 }else {

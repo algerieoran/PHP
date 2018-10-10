@@ -34,7 +34,7 @@ function internauteEstConnecteEtAdmin() {
 }
 
 //3/---------------------------------------------------------------------Fonction de Requêtte : ---------------------------------------------------------------------
-function executeRequete($req, $param = array()) {   // cette fonction attend 2 valeurs : 1 ezquête SQL (obligatoire) et un array qui associe les marqueurs aux valeurs (non obligatoire car on a affecté au paramètre un array() vide par défaut)
+function executeRequete($req, $param = array()) {   // cette fonction attend 2 valeurs : 1 requête SQL (obligatoire) et un array qui associe les marqueurs aux valeurs (non obligatoire car on a affecté au paramètre un array() vide par défaut)
 
     // Echappement des données reçues avec htmlspecialchars :
     if (!empty($param)) {  // si l'array $param n'est pas vide, je peux faire la boucle :

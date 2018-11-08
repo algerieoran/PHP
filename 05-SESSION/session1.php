@@ -9,7 +9,7 @@ Le fichier session peut contenir toutes sortes d'informations, y compris sensibl
 
 Tous les sites qui fonctionnent sur le principe de connexion (votre site bancaire) ou ceux qui ont besoin de suivre un internaute de page en page (par exemple conserver son panier) utilisent les sessions.
 
-les données stockés dans une session sont accssicible et modifiable à partie de la superglobal $_SESSION
+les données stockés dans une session sont accssicible et modifiable à partir de la superglobal $_SESSION
 
 */
 
